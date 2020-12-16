@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px 20px;
+    padding: 2em 5em;
+    font-size: 1.4em;
+}
+
+main {
+    display: flex;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+h1,
+h2 {
+    padding: 10px 0px;
+}
+
+.left-side {
+    flex: .75;
+    background-color: #d495a5;
+    padding: 20px;
+}
+
+img {
+    margin: 20px;
+}
+
+.left-side h3,
+.left-side h2 {
+    padding: 10px 0px;
+    color: rgb(14, 6, 124);
+}
+
+.left-side a {
+    text-decoration: none;
+    color: black;
+}
+
+.left-side li {
+    padding: 5px;
+}
+
+hr {
+    padding: 0;
+}
+
+.right-side {
+    flex: 2;
+    background-color: #e7edf3;
+    padding: 20px;
+}
+
+.about-me {
+    background-color: #d2d2f9;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+
+h3 {
+    padding: 5px 0px;
+    color: rgb(14, 6, 124);
+}
+
+.education {
+    margin: 30px 0px;
+}
+
+table {
+    width: 80%;
+    text-align: center;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+summary {
+    margin: 20px 0px;
+}
+
+.hyf-links li {
+    list-style-type: none;
+    display: inline;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 1.3em;
+    text-decoration: none;
+    color: rgb(36, 28, 3);
+}
