@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="page1.css">
+    <title>homework week3</title>
+</head>
+
+<body>
+    <form action="page2.html" method="GET">
+        <header>
+            <div>
+                <p>Logo</p>
+            </div>
+            <div>
+                <p>Navigation</p>
+            </div>
+        </header>
+        <section>
+            <h1>Sign up to yourcustomtailor.com</h1>
+            <p>We can't wait to help you improve your life-style and gain the attention from people around you</p>
+            <p>Sign up below to save up to 70% on apparel, hand-bags and cosmetics. Our agents are busy picking the best offers that match your preferences and style. Every week we will send you a hand-picked-selection- we just need to know a few details
+                about your first...</p>
+            <h2>Step 1/4-tell us who you are?</h2>
+            <!--To create progress bar-->
+            <span class="bar">Progress</span>
+            <div class="progress">
+                <div class="progress-value"></div>
+            </div>
+            <p>Nice to meet you. Lets spend a minute to get to know each other? Please enter the following:</p>
+            <div class="name-container">
+                <div>
+                    <label for="fname">First name*</label>
+                    <input type="text" id="fname" name="fname" required>
+                </div>
+                <div>
+                    <label for="lname">Last name*</label>
+                    <input type="text" id="lname" name="lname" required>
+                </div>
+            </div>
+            <div>
+                <label for="country">Country*</label>
+                <select id="country" name="country" required>
+                     <option value="denmark">Denmark</option>
+                     <option value="sweden">Sweden</option>
+                     <option value="norway">Norway</option>
+                     <option value="germany">Germany</option>
+                </select>
+            </div>
+            <div class="address-container">
+                <div>
+                    <label for="street-address">Street address*</label>
+                    <input type="text" id="street-address" name="street-address" required>
+                </div>
+                <div>
+                    <label for="pcode">Post code*</label>
+                    <input type="number" id="pcode" name="post-code" minlength="4" maxlength="4" required>
+                </div>
+            </div>
+            <div>
+                <label for="description">Profile description <br> <span class="description">Please provide a short description of tourself to be displayed on our social community pages</span></label>
+                <textarea name="profile-description" id="description" maxlength="500"></textarea>
+            </div>
+            <p>Use the same address for billing and shipping? Uncheck below to fill out a separate shipping address</p>
+            <div>
+                <label for="shipping-address">Shipping address</label>
+                <input type="checkbox" id="shipping-address" name="shipping-address" checked>
+            </div>
+            <div class="button">
+                <input type="submit" id="button" name="button" value="Next step">
+            </div>
+        </section>
+    </form>
+
+</body>
+
+</html>

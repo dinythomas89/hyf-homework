@@ -1,0 +1,64 @@
+/*css for index.html page*/
+
+
+/*animation property for progress bar*/
+
+@keyframes progress-bar {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 33.33%;
+    }
+}
+
+label {
+    font-weight: bold;
+    display: inline-block;
+    width: 20vw;
+    vertical-align: top;
+}
+
+input,
+select {
+    height: 4vh;
+    width: 30vw;
+}
+
+textarea {
+    height: 15vh;
+    width: 30vw;
+}
+
+.description {
+    font-size: .8em;
+    font-weight: normal;
+}
+
+input[type=checkbox] {
+    width: auto;
+    transform: scale(1.5)
+}
+
+@media (min-width:992px) {
+    label {
+        width: 20vw;
+        text-align: right;
+        margin-right: 15px;
+    }
+    input,
+    select {
+        width: 20vw;
+        height: 5vh;
+    }
+    textarea {
+        width: 40vw;
+        height: 20vh;
+    }
+    .name-container {
+        display: flex;
+    }
+    .address-container {
+        display: flex;
+    }
+}

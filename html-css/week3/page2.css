@@ -1,0 +1,45 @@
+/*css for page2.html page*/
+
+
+/*animation property for progress bar*/
+
+@keyframes progress-bar {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 66.66%;
+    }
+}
+
+label {
+    font-weight: bold;
+    display: inline-block;
+    width: 20vw;
+    vertical-align: top;
+}
+
+input {
+    height: 4vh;
+    width: 30vw;
+}
+
+input[type=radio] {
+    width: auto;
+    transform: scale(1.5)
+}
+
+@media (min-width:992px) {
+    label {
+        width: 20vw;
+        text-align: right;
+        margin-right: 15px;
+    }
+    input {
+        width: 20vw;
+        height: 5vh;
+    }
+    .newsletter-container {
+        display: flex;
+    }
+}

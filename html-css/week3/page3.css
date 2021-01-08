@@ -1,0 +1,69 @@
+/*css for page3.html page*/
+
+
+/*animation property for progress bar*/
+
+@keyframes progress-bar {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+input[type=checkbox] {
+    width: auto;
+    transform: scale(1.5);
+}
+
+li {
+    margin: 5px 0;
+}
+
+li label {
+    font-weight: bold;
+    display: inline-block;
+    width: 22vw;
+    vertical-align: top;
+}
+
+img {
+    display: block;
+}
+
+.images-container label,
+.images-container input {
+    margin-top: 5px;
+}
+
+.images-container {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.image-item {
+    flex: 1 0 25%;
+}
+
+@media (min-width:992px) {
+    ul {
+        width: 40%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    li {
+        margin: 10px 0;
+    }
+    li label {
+        width: 15vw;
+        text-align: right;
+        margin-right: 15px;
+    }
+}
