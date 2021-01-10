@@ -1,1 +1,2 @@
-﻿This is my week4  exercise
+﻿This is my week4  exercise.
+Its all about familiarising with git
