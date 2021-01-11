@@ -1,2 +1,3 @@
 ﻿This is my week4  exercise.
 Its all about familiarising with git
+i am trying to do the process again
