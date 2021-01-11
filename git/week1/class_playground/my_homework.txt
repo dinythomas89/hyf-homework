@@ -1,1 +1,2 @@
-﻿This is homework.txt page..i am using git
+﻿This is homework.txt page..i am using git..
+practising..practising..
