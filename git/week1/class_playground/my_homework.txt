@@ -1,3 +1,1 @@
-﻿This is my week 4..Its about git
-Struggling to understand..
-need to practice a lot to remeber all these commants
+﻿This is homework.txt page..i am using git
