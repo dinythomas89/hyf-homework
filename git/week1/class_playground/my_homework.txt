@@ -1,3 +1,2 @@
 this is my git exercise 2
-added some more text
-bla bla
+added some more textgit
