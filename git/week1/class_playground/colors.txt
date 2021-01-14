@@ -1,7 +1,4 @@
 Blue
 green
-yellow
-<<<<<<< HEAD
+git yellow
 maroon
-=======
->>>>>>> 5643d2c8f19d22dfc8fad7f502a6f43db0811089
