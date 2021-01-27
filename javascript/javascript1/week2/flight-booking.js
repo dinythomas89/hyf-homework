@@ -9,7 +9,7 @@ console.log(fullName2);
 
 //formal fullname
 function getFormalFullname(firstName, surName,useFormalName=true,gender){
-    if((firstName && surName)==='')
+    if(firstName==='' || surName==='')
         console.log('enter valid name');
     else if(gender==='male'){
         if(useFormalName)

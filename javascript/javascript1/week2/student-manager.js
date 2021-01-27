@@ -8,15 +8,14 @@ function addStudentToClass(studentName) {
       console.log('Please enter a valid name');
   }
   
-  else if(class07Students.length>=6){
+  else if(class07Students.length>5){
       console.log('Cannot add more students to class 07');
   }
   else if(toCheckStudentExist(studentName)){
       console.log('Student '+ studentName+' is already in the class');
   }  
   else{
-      class07Students.push(studentName)
-      return class07Students;
+      class07Students.push(studentName)      
   }
 }
 
@@ -41,7 +40,7 @@ addStudentToClass('Bella');
 console.log(class07Students);
 
 
-function getNumberOfStudents() {
+function printNumberOfStudents() {
   console.log('Number of students in class is '+class07Students.length);
 }
-getNumberOfStudents();
+printNumberOfStudents();
