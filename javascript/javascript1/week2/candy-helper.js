@@ -33,5 +33,6 @@ function canBuyMoreCandy(){
 
 addCandy('sweet', 20);
 addCandy('toffe',10);
+addCandy('chewing-gum',5)
 addCandy('chocolate',15);
 canBuyMoreCandy();

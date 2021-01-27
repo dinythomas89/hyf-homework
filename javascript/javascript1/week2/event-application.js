@@ -1,5 +1,5 @@
 //Event application
-let arr=['sunday','monday','tuesday','wednesday','thrusday','friday','saturday'];
+let arr=['Sunday','Monday','Tuesday','Wednesday','Thrusday','Friday','Saturday'];
 console.log(getEventWeekday(9)); 
 console.log(getEventWeekday(4));
 

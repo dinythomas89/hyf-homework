@@ -35,6 +35,7 @@ addStudentToClass('Jack');
 addStudentToClass('willam');
 addStudentToClass('Jack');
 addStudentToClass('kate');
+addStudentToClass('Tomas');
 addStudentToClass('Queen');
 addStudentToClass('Bella');
 console.log(class07Students);

@@ -30,4 +30,5 @@ getFormalFullname('Chris','William',true,'male');
 getFormalFullname('');
 getFormalFullname('Susan','Paul',false, 'female');
 getFormalFullname('Jerry','');
+getFormalFullname('Susan','Paul',false, 'female');
 

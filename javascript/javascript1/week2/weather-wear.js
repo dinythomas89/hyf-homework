@@ -1,7 +1,7 @@
 //weather fuction
 function whatToWear(temperature){    
     if(temperature<=5)
-        return 'winter jackets,sweaters,scarfs and mittens';
+        return 'winter jackets,sweaters,scarfs';
     else if(temperature>5 && temperature<=15)
         return 'jackets and scarfs';             
     else if(temperature>15 && temperature<=25)
