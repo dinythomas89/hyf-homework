@@ -40,7 +40,7 @@ function getReply(command) {
         return `${date} ${month} ${year}`;
     }
     else if (command.startsWith("what is")) {
-        let regExp = /\d [\+\/\*\-]/g;
+        let regExp = /\d+\s(\+|\/|\*|\-|:)\s\d+/g;
         if (regExp.test(command)) {
             const operation = command.slice(7);
             return eval(operation);
