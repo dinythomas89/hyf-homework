@@ -1,8 +1,8 @@
 //Find the shortest word
 const danishWords = ["bil", "plante", "kaffe", "bog", "ø", "planetarium"];
-getShortestWord(danishWords);
+logShortestWord(danishWords);
 
-function getShortestWord(words) {
+function logShortestWord(words) {
     let shortestWord = '';
     for (let i = 0; i < words.length; i++) {
         if (shortestWord.length == 0) {
@@ -26,11 +26,11 @@ function getDanishLetters(str) {
     const splittedString = str.split('');
     for (let i = 0; i < danishLetters.length; i++) {
         let count = 0;
-        for (let j = 0; j < splittedString.length; j++) {
-            if (danishLetters[i] === splittedString[j]) {
-                count++;
+        const mappedArray=splittedString.map(function(letters){
+            if (danishLetters[i] === letters) {
+                return count++;
             }
-        }
+        })
         sum = sum + count;
         obj.total = sum;
         obj[danishLetters[i]] = count;
@@ -49,9 +49,9 @@ const spiritAnimals = ['Bear', 'Butterfly', 'Cougar', 'Dolphin', 'Dragon', 'Eagl
 const userEnteredName = document.querySelector('#userName');
 const submit = document.querySelector('#submit');
 const displayAnimal = document.getElementById('printAnimal');
-submit.addEventListener('click', getSpiritAnimalName);
+submit.addEventListener('click', setSpiritAnimalName);
 
-function getSpiritAnimalName() {
+function setSpiritAnimalName() {
     let userName = userEnteredName.value;
     let index = spiritAnimals[Math.floor(Math.random() * spiritAnimals.length)];
     if (userName === '')
