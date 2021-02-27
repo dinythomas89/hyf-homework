@@ -66,49 +66,18 @@ console.log(radioButton);
 for (let i = 0; i < radioButton.length; i++) {
     radioButton[i].addEventListener('click', () => {
         let selectAreaValue = radioButton[i].value;
-
         let sortedProducts;
         if (selectAreaValue === 'rating') {
-            sortedProducts = products.sort(sortByRating);
-            console.log(sortedProducts);
+            sortedProducts = products.sort((a, b) => a.rating - b.rating);
         }
         else if (selectAreaValue === 'name') {
-            sortedProducts = products.sort(sortByName);
-            console.log(sortedProducts);
+            sortedProducts = products.sort((a, b) => a.name < b.name ? -1 : 1);
         }
         else if (selectAreaValue === 'price') {
-            sortedProducts = products.sort(sortByPrice);
-            console.log(sortedProducts);
+            sortedProducts = products.sort((a, b) => a.price - b.price);
         }
         productsUl.innerHTML = '';
         renderProducts(sortedProducts);
     })
-}
-
-//sorting by name
-function sortByName(a, b) {
-    const productA = a.name.toLowerCase();
-    const productB = b.name.toLowerCase();
-    let comparison;
-    if (productA > productB)
-        comparison = 1;
-    else if (productA < productB)
-        comparison = -1;
-    else comparison = 0;
-    return comparison;
-}
-
-//sorting by rating
-function sortByRating(a, b) {
-    const ratingA = a.rating;
-    const ratingB = b.rating;
-    return ratingA - ratingB;
-}
-
-//sorting by price
-function sortByPrice(a, b) {
-    const priceA = a.price;
-    const priceB = b.price;
-    return priceA - priceB;
 }
 
