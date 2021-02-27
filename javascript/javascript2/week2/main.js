@@ -17,7 +17,6 @@ function renderProducts(products) {
         productPrice.innerHTML = `Price: ${product.price}`;
         productRating.innerHTML = `Rating: ${product.rating}`;
 
-
         productLi.appendChild(productName);
         productLi.appendChild(productPrice);
         productLi.appendChild(productRating)
@@ -33,10 +32,11 @@ searchBox.addEventListener('keyup', myFunction);
 function myFunction() {
     const searchBoxValue = searchBox.value.toLowerCase();
     const filteredArray = products.filter(product => {
-        if (product.name.toLowerCase().includes(searchBoxValue)) {
-            productsUl.innerHTML = '';
-            return product.name;
+        if (!product.name.toLowerCase().includes(searchBoxValue)) {
+            return;
         }
+        productsUl.innerHTML = '';
+        return product.name;
     })
     console.log(filteredArray);
     renderProducts(filteredArray);
