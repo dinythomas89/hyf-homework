@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fast-presser.css">
+    <title>Fast Presser</title>
+</head>
+
+<body>
+    <main>
+        <label for="time-input">Enter the time</label>
+        <input type="number" id="time-input" size="50">
+        <p id="enter-time-message"></p>
+        <button id="start-game">Start game</button>
+        <button id="reset">Restart</button>
+        <div class="container">
+            <div id="s-canvas">
+                <h2>S</h2>
+                <p id="s-count"></p>
+                <p id="display-winner-s"></p>
+            </div>
+            <hr>
+            <div id="l-canvas">
+                <h2>L</h2>
+                <p id="l-count"></p>
+                <p id="display-winner-l"></p>
+            </div>
+        </div>
+        <p id="draw-game"></p>
+        <p id="game-over-text"></p>
+    </main>
+    <script src="fast-presser.js"></script>
+</body>
+
+</html>
