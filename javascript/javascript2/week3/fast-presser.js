@@ -50,7 +50,7 @@ function getWinner() {
     else if (sCount < lCount) {
         displayWinnerL.innerHTML = 'You won';
     }
-    else if (sCount === lCount) {
+    else {
         drawGame.innerHTML = 'It was draw';
     }
 }
