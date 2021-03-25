@@ -17,7 +17,7 @@
         boxes.forEach(box => {
             const x = getRandomInt(-20, 20);
             const y = getRandomInt(-20, 20);
-            
+
             box.style.left = x;
             box.style.top = y;
         });
@@ -29,10 +29,10 @@
     const targets = document.querySelectorAll('ul.targets li');
     // continously check if circles has been added to the right targets
     setInterval(() => {
-        setTargetFulfilled(redBox, targets[0], {x: 20, y: 300});
-        setTargetFulfilled(blueBox, targets[1], {x: 400, y: 300});
-        setTargetFulfilled(greenBox, targets[2], {x: 400, y: 20});
-        
+        setTargetFulfilled(redBox, targets[0], { x: 20, y: 300 });
+        setTargetFulfilled(blueBox, targets[1], { x: 400, y: 300 });
+        setTargetFulfilled(greenBox, targets[2], { x: 400, y: 20 });
+
         const allTargetsFulfilled = [...targets].every(target => target.classList.contains('fulfilled'));
         if (allTargetsFulfilled) {
             setTimeout(() => span.classList.add('shown'), 300);
@@ -41,7 +41,7 @@
 
     function setTargetFulfilled(box, targetBox, fulfilledPosition) {
         const renderedClientBox = box.getBoundingClientRect();
-        
+
         if (renderedClientBox.left === fulfilledPosition.x && renderedClientBox.top === fulfilledPosition.y) {
             targetBox.classList.add('fulfilled');
         }
