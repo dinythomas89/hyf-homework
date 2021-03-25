@@ -1,0 +1,21 @@
+[
+    {
+        "title": "A thousand years",
+        "year": 2011,
+        "singer": "Christina Perri",
+        "instruments-used": [
+            "piano",
+            "cello",
+            "guitar"
+        ]
+    },
+    {
+        "title": "My heart will go on",
+        "year": 1997,
+        "singer": "Celine Dion",
+        "instruments-used": [
+            "recorder",
+            "guitar"
+        ]
+    }
+]
