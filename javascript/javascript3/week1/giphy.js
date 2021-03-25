@@ -14,7 +14,6 @@ button.addEventListener('click', (event) => {
     fetch(`http://api.giphy.com/v1/gifs/search?q=${searchText}&api_key=pAvLnVXnC6fuqEVLzVF6FN3B8B78FLQN&limit=${numberOfImagesToDisplay}`)
         .then(response => response.json())
         .then(giphy => {
-            console.log(giphy);
             const ul = document.createElement('ul');
             displayDiv.appendChild(ul);
             //the fetched data is an object 
@@ -25,7 +24,6 @@ button.addEventListener('click', (event) => {
                 const image = document.createElement('img');
                 ul.appendChild(li);
                 li.appendChild(image);
-                console.log(element.images.downsized.url)
                 image.src = element.images.downsized.url;
             });
         })

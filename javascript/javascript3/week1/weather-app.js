@@ -14,12 +14,12 @@ const sunrise = document.getElementById('sunrise');
 const sunset = document.getElementById('sunset');
 let lat;
 let lng;
+let localStorageData;
 let setLocalStorageForButton1;
 let setLocalStorageForButton2;
 
 submitButton.addEventListener('click', (event) => {
     const cityName = userInput.value;
-    console.log(cityName)
     if (cityName === '') {
         warningMsg.innerHTML = 'Please enter a city name';
     }
@@ -62,7 +62,6 @@ getCurrentPosition.addEventListener('click', (event) => {
     }
 });
 
-let localStorageData;
 //local storage of city name using user's position
 if (localStorage.getItem('localWeather')) {
     localStorageData = localStorage.getItem('localWeather');
@@ -89,8 +88,10 @@ function displayWeatherDetails(weatherData) {
     weatherIcon.appendChild(imageIcon);
     wind.innerHTML = 'Wind: ' + weatherData.wind.speed;
     cloudy.innerHTML = 'Cloud: ' + weatherData.clouds.all;
-    sunrise.innerHTML = 'Sunrise: ' + weatherData.sys.sunrise;
-    sunset.innerHTML = 'Sunset: ' + weatherData.sys.sunset;
+    const sunriseTime = new Date(weatherData.sys.sunrise * 1000);
+    sunrise.innerHTML = 'Sunrise: ' + sunriseTime.toLocaleTimeString('en-US');
+    const sunsetTime = new Date(weatherData.sys.sunset * 1000);
+    sunset.innerHTML = 'Sunset: ' + sunsetTime.toLocaleTimeString('en-US');;
     lat = weatherData.coord.lat;
     lng = weatherData.coord.lon;
     mapfun(lat, lng);
