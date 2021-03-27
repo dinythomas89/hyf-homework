@@ -27,9 +27,10 @@ promiseFunctionForSetTime(3).then(() => {
 //using async/await
 async function asyncFunctionForSetTime(resolveAfter) {
     try {
-        setTimeout(() => {
+        const timeOut = setTimeout(() => {
             console.log('I am called asynchronously');
         }, resolveAfter * 1000);
+        return timeOut;
     } catch (error) {
         console.log('there is an error');
     }
@@ -88,7 +89,6 @@ promise
 //using async/await
 async function fetchingData() {
     try {
-        await promise;
         const response = await fetch('https://yesno.wtf/api');
         const yesOrNo = await response.json();
         console.log(yesOrNo.answer);
