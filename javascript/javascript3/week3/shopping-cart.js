@@ -53,14 +53,13 @@ class ShoppingCart {
         this.products.forEach(element => {
             const li = document.createElement('li');
             ul.appendChild(li);
-            const h2 = document.createElement('h3');
-            h2.innerHTML = element.name;
-            li.appendChild(h2);
+            const h3 = document.createElement('h3');
+            h3.innerHTML = element.name;
+            li.appendChild(h3);
             const span = document.createElement('span');
             span.innerHTML = 'Price: ' + element.price;
             li.appendChild(span);
         });
-
         const total = this.getTotal();
         const price = document.getElementById("total");
         price.innerHTML = "Total price: " + total;
@@ -96,5 +95,6 @@ shoppingCart.removeProduct(printer);
 shoppingCart.getTotal();
 shoppingCart.renderProducts();
 shoppingCart.searchProduct('mouse');
+shoppingCart.getUser();
 const plant = new Product("plant", 50);
 console.log(plant.convertToCurrency("euro"));
