@@ -1,0 +1,13 @@
+body {
+    margin: 10% 20%;
+    font-size: 1.5em;
+    background-color: lavender;
+}
+
+li {
+    list-style-type: none;
+}
+
+#total {
+    font-weight: bolder;
+}
