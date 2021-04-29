@@ -16,8 +16,6 @@ const mealWithReview = meals.map(meal => {
 const cheapMeals = mealWithReview.filter(meal => meal.price < 80);
 //to find meals having large reservations
 const largeMeals = mealWithReview.filter(meal => meal.maxNumberOfGuests > 5);
-//choosing a random number
-const randomNumber = Math.floor(Math.random() * 3) + 1;
 
 // this is where you will be adding your routes
 app.get("/", async (request, response) => {
@@ -37,6 +35,7 @@ app.get("/large-meals", async (request, response) => {
 });
 
 app.get("/meal", async (request, response) => {
+  const randomNumber = Math.floor(Math.random() * meals.length) + 1;
   response.send(mealWithReview[randomNumber]);
 });
 
@@ -45,6 +44,7 @@ app.get("/reservations", async (request, response) => {
 });
 
 app.get("/reservation", async (request, response) => {
+  const randomNumber = Math.floor(Math.random() * reservations.length) + 1;
   response.send(reservations[randomNumber]);
 });
 
