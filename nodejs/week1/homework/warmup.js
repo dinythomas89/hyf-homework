@@ -5,15 +5,19 @@ class Circle {
         this.radius = radius;
     }
     getDiameter() {
-        console.log(this.radius * 2);
+        const diameter = this.radius * 2;
+        console.log(diameter);
+        return diameter;
     }
     getCircumference() {
-        console.log(2 * 3.14 * this.radius);
+        console.log(3.14 * this.getDiameter());
     }
     getArea() {
         console.log(3.14 * this.radius * this.radius);
     }
 }
 
-const circle = new Circle(10);
+const circle = new Circle(20);
 circle.getDiameter();
+circle.getDiameter();
+circle.getArea();

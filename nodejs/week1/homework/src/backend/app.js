@@ -35,7 +35,7 @@ app.get("/large-meals", async (request, response) => {
 });
 
 app.get("/meal", async (request, response) => {
-  const randomNumber = Math.floor(Math.random() * meals.length) + 1;
+  const randomNumber = Math.floor(Math.random() * meals.length);
   response.send(mealWithReview[randomNumber]);
 });
 
@@ -44,7 +44,7 @@ app.get("/reservations", async (request, response) => {
 });
 
 app.get("/reservation", async (request, response) => {
-  const randomNumber = Math.floor(Math.random() * reservations.length) + 1;
+  const randomNumber = Math.floor(Math.random() * reservations.length);
   response.send(reservations[randomNumber]);
 });
 
