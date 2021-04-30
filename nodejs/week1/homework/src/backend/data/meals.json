@@ -1,0 +1,26 @@
+[
+    {
+        "id" : 1,
+        "title" : "Indian food in the summer",
+        "maxNumberOfGuests" : 5,
+        "description" : "A nice night out eating delicious indian food",
+        "createdAt" : "2019/12/7 14:34",
+        "price" : 67
+    },
+    {
+        "id" : 2,
+        "title" : "Authentic Danish food",
+        "maxNumberOfGuests" : 8,
+        "description" : "A perfect day out with classic danish dishes",
+        "createdAt" : "2020/1/7 14:34",
+        "price" : 88
+    },
+    {
+        "id" : 3,
+        "title" : "Delicious french meal",
+        "maxNumberOfGuests" : 4,
+        "description" : "French dishes that are better than a vacation in Paris",
+        "createdAt" : "2020/2/7 14:34",
+        "price" : 93
+    }
+]
