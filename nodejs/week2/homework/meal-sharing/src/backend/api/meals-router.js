@@ -56,14 +56,14 @@ router.get("/:id", async (request, response) => {
   try {
     const id = parseInt(request.params.id);
     if (isNaN(id)) {
-      response.status(404).send('User IDs must be integers.');
+      response.status(400).send('User IDs must be integers.');
       return;
     }
     const selectedMeals = meals.filter(meal => meal.id === id);
     if (selectedMeals.length > 0)
       response.send(selectedMeals);
     else
-      response.status(404).send('No meal with this id.');
+      response.status(400).send('No meal with this id.');
   }
   catch (error) {
     throw error;
