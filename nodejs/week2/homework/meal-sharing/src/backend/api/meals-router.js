@@ -29,7 +29,7 @@ router.get("/", async (request, response) => {
     if ('createdAfter' in request.query) {
       const createdAfter = new Date(request.query.createdAfter);
       if (!createdAfter.getDate()) {
-        response.status(404).send('must be a valid date.');
+        response.status(400).send('must be a valid date.');
         return;
       }
       selectedMeals = selectedMeals.filter(meal => new Date(meal.createdAt) > createdAfter);
