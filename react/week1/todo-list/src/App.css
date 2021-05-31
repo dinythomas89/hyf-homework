@@ -1,0 +1,20 @@
+body {
+    margin: 20px;
+}
+
+.container {
+    padding: 20px;
+    width: 60%;
+    text-align: center;
+    background-color: cornsilk;
+}
+
+.main-heading {
+    border-bottom: 1px solid black;
+}
+
+.list-header,
+.list-items {
+    display: flex;
+    justify-content: space-between;
+}
