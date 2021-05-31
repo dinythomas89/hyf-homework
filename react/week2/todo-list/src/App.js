@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import data from "./Components/data.json";
+import data from "./data.json";
 import './App.css';
 import Header from './Components/Header';
 import SetTimer from './Components/SetTimer';
