@@ -32,12 +32,13 @@ function App() {
     }
 
     const editTodo = (id, newDescription) => {
-        todoList.map((task) => {
+        const editedTodoList = todoList.map((task) => {
             if (task.id === id) {
-                task.description = newDescription;
-            }
-            return task;
+                return { ...task, description: newDescription }
+            } else
+                return task;
         });
+        setTodoList(editedTodoList);
     }
 
     return (
