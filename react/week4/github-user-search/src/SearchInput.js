@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { DataContext } from './FetchUsers';
+import { DataContext } from './Users';
 import RenderUsers from './RenderUsers';
 
 function SearchInput() {

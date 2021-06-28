@@ -1,9 +1,10 @@
 import React, { useState, useEffect, createContext } from 'react';
+import RenderUsers from './RenderUsers';
 import SearchInput from './SearchInput';
 
 export const DataContext = createContext('');
 
-function FetchUsers() {
+function Users() {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [users, setUsers] = useState([]);
@@ -12,6 +13,7 @@ function FetchUsers() {
         const API_URL = `https://api.github.com/search/users?q=${query}`;
 
         try {
+            setIsLoaded(false);
             const response = await fetch(API_URL);
             if (!response.ok) {
                 const message = `An error has occured: ${response.status}`;
@@ -26,22 +28,21 @@ function FetchUsers() {
             setError(error);
         }
     }
-
     useEffect(() => {
         fetchGithubApi();
     }, []);
 
-    if (error) {
-        return <div>Error: {error.message}</div>;
-    } else if (!isLoaded) {
-        return <div>Loading...</div>;
-    } else {
-        return (
-            <DataContext.Provider value={{ users, fetchGithubApi }}>
-                <SearchInput />
-            </DataContext.Provider>
-        );
+    function Loading() {
+        return <div>Loading... </div>;
     }
+
+
+    return (
+        <DataContext.Provider value={{ users, fetchGithubApi, isLoaded }}>
+            <SearchInput />
+            {isLoaded ? <Loading /> : <RenderUsers />}
+        </DataContext.Provider>
+    );
 }
 
-export default FetchUsers;
+export default Users;
