@@ -5,3 +5,6 @@ carrot
 radish
 cucumber
 beans
+pumpkin
+carrot
+radish
