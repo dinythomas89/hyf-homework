@@ -1,5 +1,7 @@
 potato
 tomato
-cabbage
+cauliflower
 carrot
 radish
+cucumber
+beans
